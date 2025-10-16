@@ -5,7 +5,8 @@ export default function ServiceCard({ icon, title, description }) {
         text-center shadow-lg hover:scale-101 hover:shadow-2xl transition-all">
       <i className="mb-10 text-amber-400">{icon}</i>
       <h4 className="text-lg font-semibold mb-4 text-white">{title}</h4>
-      <p className="text-white break-words line-clamp-3">{description}</p>
+      <p className="text-white break-words overflow-hidden text-ellipsis whitespace-pre-line"> { description } </p>
     </div>
   );
 }
+
