@@ -13,8 +13,8 @@ export default function NavBar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo à droite */}
           <div className="flex-shrink-0 ml-auto md:ml-0 md:mr-auto">
-            <Link href="/" className="text-xl font-bold">
-              <span className="bg-gradient-to-b from-[rgba(78,180,30,0.67)] to-[rgba(8,58,134,0.68)] bg-clip-text text-transparent">
+            <Link href="/" className="text-3xl font-bold">
+              <span className="bg-gradient-to-r from-blue-800 via-green-600 to-green-500 bg-clip-text text-transparent">
                 Innov-T
               </span>
             </Link>

@@ -7,7 +7,7 @@ export default function CTA() {
       style={{
         backgroundImage:
           "linear-gradient(90deg, rgba(8,58,134,0.9) 0%, rgba(8,58,134,0.85) 10%, rgba(78,180,30,0.85) 100%), url('/images/bg-hero-section.jpg')",
-        backgroundSize: "cover",
+        backgroundSize: "contain",
         backgroundPosition: "center",
       }}
     >
@@ -28,11 +28,11 @@ export default function CTA() {
       </div>
 
       {/* ===== Globe positionné à droite ===== */}
-      <div className="absolute right-42 top-1/2 transform -translate-y-1/2 opacity-80">
+      <div className="absolute right-90 top-1/2 transform -translate-y-1/2 opacity-80">
         <img
           src="/images/glob.png"
           alt="Globe numérique"
-          className="w-[230px] md:w-[320px] object-contain"
+          className="w-[100px] md:w-[250px] object-contain"
         />
       </div>
 

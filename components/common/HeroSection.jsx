@@ -5,11 +5,11 @@ export default function HeroSection() {
     <section className="relative overflow-hidden">
       {/* ===== HERO ===== */}
       <div
-        className="relative flex flex-col items-center justify-center text-center text-white py-32 px-6"
+        className="relative flex flex-col min-h-screen pt-32 text-center text-white px-6"
         style={{
           backgroundImage:
             "linear-gradient(90deg, rgba(8,58,134,0.9) 0%, rgba(8,58,134,0.85) 10%, rgba(78,180,30,0.85) 100%), url('/images/bg-hero-section.jpg')",
-          backgroundSize: "cover",
+          backgroundSize: "contain",
           backgroundPosition: "center",
         }}
       >
@@ -19,7 +19,7 @@ export default function HeroSection() {
         </h1>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-          <button className="px-8 cursor-pointer py-3 bg-blue-900 hover:bg-blue-800 text-white rounded-full font-semibold transition">
+          <button className="px-8 cursor-pointer py-3 bg-blue-900 hover:bg-blue-700 text-white rounded-full font-semibold transition">
             Découvrir nos projets
           </button>
           <button className="px-8 cursor-pointer py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-semibold transition">
