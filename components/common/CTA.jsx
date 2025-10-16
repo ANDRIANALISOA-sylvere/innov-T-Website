@@ -22,13 +22,13 @@ export default function CTA() {
           Plongez dans un monde de créativité numérique où chaque œuvre est une nouvelle découverte.
         </p>
 
-        <button className="mt-6 px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full transition">
+        <button className="mt-6 cursor-pointer px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-full transition">
           Découvrir mon projet
         </button>
       </div>
 
       {/* ===== Globe positionné à droite ===== */}
-      <div className="absolute right-24 top-1/2 transform -translate-y-1/2 opacity-80">
+      <div className="absolute right-42 top-1/2 transform -translate-y-1/2 opacity-80">
         <img
           src="/images/glob.png"
           alt="Globe numérique"
