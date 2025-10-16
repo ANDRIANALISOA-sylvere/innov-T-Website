@@ -1,5 +1,5 @@
 'use client';
-
+import Title from "@/components/common/Title";
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden">
@@ -19,10 +19,10 @@ export default function HeroSection() {
         </h1>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-          <button className="px-8 py-3 bg-blue-700 hover:bg-blue-800 text-white rounded-full font-semibold transition">
+          <button className="px-8 cursor-pointer py-3 bg-blue-900 hover:bg-blue-800 text-white rounded-full font-semibold transition">
             Découvrir nos projets
           </button>
-          <button className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-semibold transition">
+          <button className="px-8 cursor-pointer py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-semibold transition">
             Je veux une équipe
           </button>
         </div>
@@ -31,9 +31,7 @@ export default function HeroSection() {
       {/* ===== BLOC STATS ===== */}
       <div className="flex justify-center relative z-20">
         <div className="w-3/4 bg-white rounded-2xl shadow-xl -mt-20 py-10 px-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-blue-800 mb-10">
-            INNOV-T en chiffre
-          </h2>
+          <Title title="Innov-T en chiffre"></Title>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 divide-x divide-gray-200">
             <div className="px-4">
