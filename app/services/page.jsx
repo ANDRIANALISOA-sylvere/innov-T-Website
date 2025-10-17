@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Title from "@/components/common/Title";
-import ServiceCard from "@/components/services/ServiceCard";
+import ServiceCard from "@/components/common/ServiceCard";
 import { Search } from "lucide-react";
 
 export default function ServicesPage() {
