@@ -13,7 +13,7 @@ export default function CTA() {
     >
       {/* ===== Contenu principal ===== */}
       <div className="relative z-10 max-w-3xl text-left">
-        <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-2">
+        <h2 className="text-4xl md:text-4xl font-bold leading-tight mb-2 monument">
           Explorer l’univers de nos arts <br />
           <span className="text-green-400">NUMERIQUES</span>
         </h2>

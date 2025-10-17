@@ -14,7 +14,7 @@ export default function NavBar() {
           {/* Logo à droite */}
           <div className="flex-shrink-0 ml-auto md:ml-0 md:mr-auto">
             <Link href="/" className="text-3xl font-bold">
-              <span className="bg-gradient-to-r from-blue-800 via-green-600 to-green-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-800 via-green-600 to-green-500 bg-clip-text text-transparent monument">
                 Innov-T
               </span>
             </Link>
