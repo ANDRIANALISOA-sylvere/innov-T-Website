@@ -1,3 +1,4 @@
+// components/CeoContactSection.tsx
 'use client';
 
 export default function CeoContactSection() {
@@ -10,19 +11,26 @@ export default function CeoContactSection() {
           "Notre mission est de transformer vos idées les plus ambitieuses en solutions digitales performantes. Chaque projet est une opportunité d'innovation et d'excellence."
         </blockquote>
         
-        {/* Avatar */}
-        <div className="flex items-center mb-4">
-          <div className="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center mr-4">
-            <span className="text-2xl font-bold text-gray-600">MR</span>
+        {/* Avatar, Nom et Titre centrés */}
+        <div className="flex flex-col items-center text-center">
+          {/* Avatar */}
+          <div className="w-20 h-20 rounded-full overflow-hidden mb-4 border-2 border-gray-200">
+            <img 
+              src="/images/ceo.jpg" 
+              alt="Marius Randrianarison - CEO & Fondateur"
+              className="w-full h-full object-cover"
+            />
           </div>
-          <div>
-            {/* Nom */}
-            <p className="font-semibold text-gray-800">Marius Randrianarison</p>
-            {/* Titre avec dégradé */}
-            <p className="bg-gradient-to-r from-blue-800 via-green-600 to-green-500 bg-clip-text text-transparent font-medium">
-              CEO & Fondateur
-            </p>
-          </div>
+          
+          {/* Nom */}
+          <p className="font-semibold text-gray-800 text-lg mb-1">
+            Marius Randrianarison
+          </p>
+          
+          {/* Titre avec dégradé */}
+          <p className="bg-gradient-to-r from-blue-800 via-green-600 to-green-500 bg-clip-text text-transparent font-medium">
+            CEO & Fondateur
+          </p>
         </div>
       </div>
 

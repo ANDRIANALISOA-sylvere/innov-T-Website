@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Title from "@/components/common/Title";
 export default function HeroSection() {
   return (
@@ -13,8 +13,9 @@ export default function HeroSection() {
           backgroundPosition: "center",
         }}
       >
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-          Propulsez Votre Entreprise vers<br />
+        <h1 className="text-xl md:text-5xl monument leading-tight">
+          Propulsez Votre Entreprise vers
+          <br />
           L’<span className="text-green-400">Innovation</span> Technologique
         </h1>
 

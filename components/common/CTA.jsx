@@ -15,7 +15,7 @@ export default function CTA() {
       <div className="relative z-10 max-w-3xl text-left">
         <h2 className="text-4xl md:text-5xl font-bold leading-tight mb-2">
           Explorer l’univers de nos arts <br />
-          <span className="text-green-400">NUMÉRIQUES</span>
+          <span className="text-green-400">NUMERIQUES</span>
         </h2>
 
         <p className="text-lg text-gray-200 max-w-lg">

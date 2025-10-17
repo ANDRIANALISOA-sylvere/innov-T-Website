@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <HeroSection/>
       <CTA/>
-      <Partner/>
+      {/* <Partner/> */}
       <WhyChoose/>
       <Technologie/>
     </div>
