@@ -71,7 +71,7 @@ export default function BlogPage() {
                 </div>
 
                 {/* Grille des cartes */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full px-2 sm:px-4 lg:px-8 py-6 sm:py-8 lg:py-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full sm:px-4 lg:px-8 py-6 sm:py-8 lg:py-10">
                     {blogPosts.map((post, index) => (
                         <div key={post.id}
                             className={`transform transition-all duration-700 delay-${400 + index * 100} ${

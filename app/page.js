@@ -3,6 +3,7 @@ import CTA from "@/components/common/CTA"
 import Partner from "@/components/common/Partner"
 import WhyChoose from "@/components/common/WhyChoose"
 import Technologie from "@/components/common/Technologie"
+import Footer from "@/components/common/Footer"
 export default function Home() {
   return (
     <div>
@@ -11,6 +12,7 @@ export default function Home() {
       {/* <Partner/> */}
       <WhyChoose/>
       <Technologie/>
+      <Footer/>
     </div>
   );
 }

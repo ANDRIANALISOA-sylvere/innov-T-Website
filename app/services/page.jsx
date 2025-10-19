@@ -3,37 +3,37 @@
 import { useState, useEffect } from "react";
 import Title from "@/components/common/Title";
 import ServiceCard from "@/components/common/ServiceCard";
-import { Search } from "lucide-react";
+import { Search, CodeXml, Apple, Handshake, Cloud, Shield, Palette } from "lucide-react";
 
 export default function ServicesPage() {
 
   const servicesData = [
     {
-      icon: "🌐",
+      icon: <CodeXml className="h-12 w-12" />,
       title: "Développement de site internet et E-commerce",
       description:
         "Création de sites web modernes, performants et sécurisés, adaptés à vos besoins professionnels.",
     },
     {
-      icon: "📱",
+      icon: <Apple className="h-12 w-12" />,
       title: "Applications mobiles Android et iOS",
       description:
         "Développement d'applications mobiles natives et hybrides pour améliorer votre visibilité mobile.",
     },
     {
-      icon: "☁️",
+      icon: <Cloud className="h-12 w-12" />,
       title: "Solutions cloud et hébergement",
       description:
         "Mise en place et gestion d'infrastructures cloud sécurisées et performantes.",
     },
     {
-      icon: "🎨",
+      icon: <Palette className="h-12 w-12" />,
       title: "Design UI/UX et identité visuelle",
       description:
         "Création d'interfaces modernes et d'expériences utilisateur fluides et esthétiques.",
     },
     {
-      icon: "🔒",
+      icon: <Shield className="h-12 w-12" />,
       title: "Cybersécurité et audit technique",
       description:
         "Protection de vos données, audit de sécurité et détection de vulnérabilités.",
@@ -71,19 +71,22 @@ export default function ServicesPage() {
         </p>
 
         {/* Barre de recherche avec animation */}
-        <div className={`relative max-w-2xl mx-auto mb-8 transform transition-all duration-700 delay-300 ${
+        <div className={`relative w-full mx-auto mb-8 transform transition-all duration-700 delay-300 ${
           isMounted ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
         }`}>
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-            <Search className="h-5 w-5 text-gray-400" />
-          </div>
           <input
             type="text"
             placeholder="Rechercher un service..."
             value={result}
             onChange={(e) => setResult(e.target.value)}
-            className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition text-base"
+            className="w-full pl-6 pr-12 py-4 rounded-full bg-white 
+                     text-gray-800 placeholder-gray-500 border border-gray-300 outline-none shadow-sm
+                     focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all text-base"
           />
+          {/* Icône de recherche à droite */}
+          <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+            <Search className="h-5 w-5 text-gray-400" />
+          </div>
         </div>
 
         {/* Grille avec animations échelonnées */}

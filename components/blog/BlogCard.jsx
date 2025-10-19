@@ -1,29 +1,38 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function BlogCard({id,image, title}){
-
+export default function BlogCard({id, image, title}){
     
     return(
-        <div className="p-3 bg-gradient-to-br from-blue-50 to-green-50
-         rounded-2xl text-center shadow-lg transition-all duration-300 w-fit
-         hover:scale-101 hover:shadow-xl"> 
-            <Image
-                className="mb-4 transition-transform duration-300 hover:scale-101 rounded-2xl"
-                src={image}
-                alt="image"
-                width={300}
-                height={500}
-            />
-            <h2 className="font-semibold text-lg transition-colors duration-30 px-2">
+        <div className="bg-gradient-to-br from-blue-800 to-green-600
+         rounded-2xl text-center shadow-lg transition-all duration-300 
+         hover:scale-105 hover:shadow-xl w-[280px]"> 
+            {/* Image avec padding harmonisé et taille réduite */}
+            <div className="p-2"> 
+                <div className="w-full h-[280px] relative overflow-hidden rounded-xl">
+                    <Image
+                        className="transition-transform duration-300 hover:scale-105"
+                        src={image}
+                        alt="image"
+                        fill
+                        style={{ objectFit: 'cover' }}
+                    />
+                </div>
+            </div>
+            
+            <h2 className="font-semibold text-lg text-white px-4 mb-3">
                 {title}
             </h2>
 
-            <button className="mt-6 cursor-pointer px-8 py-3 bg-blue-800 hover:bg-blue-700 
-            text-white rounded-full transition-all duration-300 mx-auto">
-                <Link href={`/blog/${id}`}>voir plus d'info</Link>
-            </button>
+            {/* Bouton avec fond bleu */}
+            <div className="pb-3">
+                <Link href={`/blog/${id}`}>
+                    <button className="cursor-pointer px-4 py-2 bg-blue-600 hover:bg-blue-700 
+                    text-white rounded-full transition-all duration-300 text-sm font-medium">
+                        Voir plus d'info
+                    </button>
+                </Link>
+            </div>
         </div>
     )
-
 }

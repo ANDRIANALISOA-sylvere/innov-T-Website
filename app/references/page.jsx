@@ -71,86 +71,60 @@ export default function ReferencesPage(){
     ]
 
     return(
-        <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-7xl mx-auto">
-                {/* En-tête avec statistique */}
-                <div className={`text-center mb-16 transition-all duration-700 ${
-                    isMounted ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                }`}>
-                    <Title title="Nos Références" />
-                    <div className="mt-6 bg-gradient-to-r from-blue-800 to-green-600 text-white py-4 px-8 rounded-full inline-block">
-                        <h2 className="text-xl font-bold">Plus de 50 entreprises nous font confiance</h2>
-                    </div>
+        <div className="min-h-screen bg-gray-100">
+            <div className="max-w-6xl mx-auto">
+                {/* En-tête avec dégradé comme AboutSection */}
+                <div className="bg-gradient-to-r from-blue-800 to-green-600 text-white p-12 rounded-b-xl rounded-t-none">
+                    <h2 className="text-3xl font-bold">
+                        Plus de <span className="text-yellow-400">50</span> entreprises nous font confiance
+                    </h2>
                 </div>
+                
+                {/* Contenu principal */}
+                <div className="p-8 mt-12">
+                    {/* Grille des témoignages */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                        {testimonials.map((testimonial, index) => (
+                            <div
+                                key={testimonial.id}
+                                className={`bg-white rounded-2xl p-6 transition-all duration-700 hover:shadow-xl hover:scale-105 ${
+                                    isMounted 
+                                        ? 'translate-y-0 opacity-100' 
+                                        : 'translate-y-8 opacity-0'
+                                }`}
+                                style={{
+                                    transitionDelay: isMounted ? `${200 + index * 100}ms` : '0ms'
+                                }}
+                            >
+                                {/* Logo de l'entreprise */}
+                                <div className="flex justify-center mb-4">
+                                    <Image
+                                        src={testimonial.logo}
+                                        alt={`Logo ${testimonial.company}`}
+                                        width={80}
+                                        height={80}
+                                        className="rounded-full object-cover"
+                                    />
+                                </div>
 
-                {/* Grille des témoignages */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {testimonials.map((testimonial, index) => (
-                        <div
-                            key={testimonial.id}
-                            className={`bg-white rounded-2xl shadow-lg p-6 transition-all duration-700 hover:shadow-xl hover:scale-105 ${
-                                isMounted 
-                                    ? 'translate-y-0 opacity-100' 
-                                    : 'translate-y-8 opacity-0'
-                            }`}
-                            style={{
-                                transitionDelay: isMounted ? `${200 + index * 100}ms` : '0ms'
-                            }}
-                        >
-                            {/* Logo de l'entreprise */}
-                            <div className="flex justify-center mb-6">
-                                <Image
-                                    src={testimonial.logo}
-                                    alt={`Logo ${testimonial.company}`}
-                                    width={80}
-                                    height={80}
-                                    className="rounded-full object-cover"
-                                />
-                            </div>
+                                {/* Nom de l'entreprise en bleu */}
+                                <h3 className="text-lg font-bold text-blue-800 mb-4 text-center">
+                                    {testimonial.company}
+                                </h3>
 
-                            {/* Contenu avec layout flex comme avant */}
-                            <div className="flex gap-4">
-                                <div className="flex-1">
-                                    <h3 className="text-lg font-bold text-gray-800 mb-2">
-                                        {testimonial.company}
-                                    </h3>
-                                    <p className="text-gray-600 text-sm mb-4">
-                                        {testimonial.person}
+                                {/* Personne en gras */}
+                                <p className="font-bold text-gray-800 mb-4 text-center text-sm">
+                                    {testimonial.person}
+                                </p>
+
+                                {/* Témoignage */}
+                                <div className="mt-4 pt-4 border-t border-gray-100">
+                                    <p className="text-gray-700 leading-relaxed text-sm italic text-center">
+                                        "{testimonial.text}"
                                     </p>
                                 </div>
-                                <div className="border-l-2 border-gray-300 pl-4 text-right">
-                                    <div className="flex space-x-1 mb-2 justify-end">
-                                        {[1, 2, 3, 4, 5].map((star) => (
-                                            <span key={star} className="text-yellow-400 text-sm">⭐</span>
-                                        ))}
-                                    </div>
-                                    <span className="text-xs text-green-600 font-semibold">Satisfait</span>
-                                </div>
                             </div>
-
-                            {/* Témoignage */}
-                            <div className="mt-4 pt-4 border-t border-gray-100">
-                                <p className="text-gray-700 leading-relaxed text-sm italic">
-                                    "{testimonial.text}"
-                                </p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Section CTA */}
-                <div className={`mt-16 text-center transition-all duration-700 delay-500 ${
-                    isMounted ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
-                }`}>
-                    <div className="bg-gradient-to-r from-blue-50 to-green-50 rounded-2xl p-8 border border-gray-200">
-                        <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                            Rejoignez les entreprises qui nous font confiance
-                        </h2>
-                        <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                            Comme nos clients satisfaits, bénéficiez de notre expertise en développement 
-                            numérique pour concrétiser vos projets.
-                        </p>
-
+                        ))}
                     </div>
                 </div>
             </div>
