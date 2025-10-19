@@ -53,7 +53,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="fr" suppressHydrationWarning> {/* Changé en "fr" pour le français */}
+        <html lang="fr" suppressHydrationWarning>
         <head>
             <Favicon />
             {/* Structured Data for Local Business */}

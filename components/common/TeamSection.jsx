@@ -37,12 +37,12 @@ export default function TeamSection() {
       role: "Expert Devops"
     },
     {
-      image: "/images/equipes/tonio.jpg",
+      image: "/images/equipes/equipe6.jpg",
       name: "Antonio ANDRIATSIAFORITRARIVO ",
       role: "Développeur"
     },
       {
-          image: "/images/equipes/sylvere.jpg",
+          image: "/images/equipes/equipe5.jpg",
           name: "Joséphin Sylvère ANDRIANALISOA",
           role: "Développeur"
       }
