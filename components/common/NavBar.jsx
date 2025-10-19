@@ -4,7 +4,6 @@ import { useState } from "react";
 import Link from "next/link";
 
 export default function NavBar() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
@@ -44,56 +43,12 @@ export default function NavBar() {
                 Expertises
               </Link>
 
-              {/* Dropdown Notre Agence */}
-              <div className="relative">
-                <button
-                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                  className="text-gray-600 hover:text-black px-3 py-2 text-sm font-medium transition duration-300 flex items-center cursor-pointer"
-                >
-                  Notre agence
-                  <svg
-                    className={`ml-1 h-4 w-4 transition-transform ${
-                      isDropdownOpen ? "rotate-180" : ""
-                    }`}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-
-                {isDropdownOpen && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50 border border-gray-200">
-                    <Link
-                      href="/a-propos"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-black"
-                      onClick={() => setIsDropdownOpen(false)}
-                    >
-                      À propos
-                    </Link>
-                    <Link
-                      href="/equipes"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-black"
-                      onClick={() => setIsDropdownOpen(false)}
-                    >
-                      Équipes
-                    </Link>
-                    <Link
-                      href="/pourquoi-nous"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-black"
-                      onClick={() => setIsDropdownOpen(false)}
-                    >
-                      Pourquoi Nous ?
-                    </Link>
-                  </div>
-                )}
-              </div>
+              <Link
+                href="/agences"
+                className="text-gray-600 hover:text-black px-3 py-2 text-sm font-medium transition duration-300"
+              >
+                Notre agence
+              </Link>
 
               <Link
                 href="/blog"
@@ -178,62 +133,13 @@ export default function NavBar() {
                 Expertises
               </Link>
 
-              <div
-                className="px-3 py-2 text-gray-600 font-medium cursor-pointer"
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              <Link
+                href="/agences"
+                className="block px-3 py-2 text-gray-600 hover:text-black hover:bg-gray-50 rounded-md"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Notre agence
-                <svg
-                  className={`ml-1 h-4 w-4 inline transition-transform ${
-                    isDropdownOpen ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </div>
-
-              {isDropdownOpen && (
-                <div className="pl-6 space-y-1">
-                  <Link
-                    href="/a-propos"
-                    className="block px-3 py-2 text-gray-500 hover:text-black hover:bg-gray-50 rounded-md"
-                    onClick={() => {
-                      setIsMobileMenuOpen(false);
-                      setIsDropdownOpen(false);
-                    }}
-                  >
-                    À propos
-                  </Link>
-                  <Link
-                    href="/equipes"
-                    className="block px-3 py-2 text-gray-500 hover:text-black hover:bg-gray-50 rounded-md"
-                    onClick={() => {
-                      setIsMobileMenuOpen(false);
-                      setIsDropdownOpen(false);
-                    }}
-                  >
-                    Équipes
-                  </Link>
-                  <Link
-                    href="/pourquoi-nous"
-                    className="block px-3 py-2 text-gray-500 hover:text-black hover:bg-gray-50 rounded-md"
-                    onClick={() => {
-                      setIsMobileMenuOpen(false);
-                      setIsDropdownOpen(false);
-                    }}
-                  >
-                    Pourquoi Nous ?
-                  </Link>
-                </div>
-              )}
+              </Link>
 
               <Link
                 href="/blog"
@@ -262,14 +168,6 @@ export default function NavBar() {
           </div>
         )}
       </div>
-
-      {/* Overlay pour fermer le dropdown en cliquant ailleurs */}
-      {isDropdownOpen && (
-        <div
-          className="fixed inset-0 z-40"
-          onClick={() => setIsDropdownOpen(false)}
-        />
-      )}
     </nav>
   );
 }
