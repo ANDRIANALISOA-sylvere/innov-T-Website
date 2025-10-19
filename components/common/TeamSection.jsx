@@ -6,43 +6,48 @@ export default function TeamSection() {
     {
       image: "/images/ceo.jpg",
       name: "Marius Randrianarison",
-      role: "CEO Fondateur"
+      role: "CEO - Fondateur"
     },
     {
       image: "/images/equipes/equipe1.jpg",
-      name: "Jean Dupont",
+      name: "Donis Antonio",
       role: "Associé"
     },
     {
-      image: "/images/equipes/equipe2.jpg",
-      name: "Marie Laurent",
+      image: "/images/equipes/equipe4.jpg",
+      name: "Tiavindrainy Elysé",
       role: "Associé co-fondateur"
     },
     {
-      image: "/images/equipes/equipe3.jpg",
-      name: "Pierre Martin",
-      role: "Associé Directeur Finance"
+      image: "/images/equipes/equipe2.jpg",
+      name: "Rado Ramiarinjaona",
+      role: "Associé - Directeur Finance"
     }
   ];
   
   const experts = [
     {
-      image: "/images/equipes/equipe4.jpg",
-      name: "Thomas Bernard",
-      role: "Lead Développeur"
+      image: "/images/equipes/equipe3.jpg",
+      name: "Mario Randrianarison",
+      role: "Lead multimédia"
     },
     {
       image: "/images/equipes/Eddy.jpg",
-      name: "Sophie Moreau",
+      name: "Eddy Rakotonirina",
       role: "Expert Devops"
     },
     {
-      image: "/images/equipes/equipe1.jpg",
-      name: "Lucie Petit",
-      role: "Lead multimédia"
-    }
+      image: "/images/equipes/tonio.jpg",
+      name: "Antonio ANDRIATSIAFORITRARIVO ",
+      role: "Développeur"
+    },
+      {
+          image: "/images/equipes/sylvere.jpg",
+          name: "Joséphin Sylvère ANDRIANALISOA",
+          role: "Développeur"
+      }
   ];
-  
+
   return (
     <section className="py-20 bg-gray-50 px-6">
       <div className="max-w-6xl mx-auto">
