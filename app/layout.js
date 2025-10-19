@@ -1,5 +1,6 @@
 import "./globals.css";
 import NavBar from "@/components/common/NavBar";
+import Footer from "@/components/common/Footer";
 
 export const metadata = {
   title: "Innov-T",
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       >
         <NavBar/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

@@ -1,5 +1,65 @@
 "use client";
 import Title from "@/components/common/Title";
+import ServiceCard from "@/components/common/ServiceCard";
+import { CodeXml, Apple, Cloud } from "lucide-react";
+import Link from "next/link";
+
+export function ServicesPreview() {
+    const services = [
+        {
+            icon: <CodeXml className="h-12 w-12" />,
+            title: "Développement de site internet et E-commerce",
+            description:
+                "Création de sites web modernes, performants et sécurisés, adaptés à vos besoins professionnels.",
+        },
+        {
+            icon: <Apple className="h-12 w-12" />,
+            title: "Applications mobiles Android et iOS",
+            description:
+                "Développement d'applications mobiles natives et hybrides pour améliorer votre visibilité mobile.",
+        },
+        {
+            icon: <Cloud className="h-12 w-12" />,
+            title: "Solutions cloud et hébergement",
+            description:
+                "Mise en place et gestion d'infrastructures cloud sécurisées et performantes.",
+        },
+    ];
+
+    return (
+        <div className="py-12 px-6 bg-gray-50">
+            <div className="max-w-6xl mx-auto text-center">
+                {/* Titre */}
+                <Title title="Nos services" />
+
+                {/* Phrase en gras */}
+                <p className="text-gray-800 text-lg font-bold mb-8">
+                    Découvrez le service numérique qui correspond à vos besoins
+                </p>
+
+                {/* Grille des services */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    {services.map((service, index) => (
+                        <ServiceCard
+                            key={index}
+                            icon={service.icon}
+                            title={service.title}
+                            description={service.description}
+                        />
+                    ))}
+                </div>
+
+                {/* Bouton En savoir plus */}
+                <Link
+                    href="/services"
+                    className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition"
+                >
+                    En savoir plus sur nos services
+                </Link>
+            </div>
+        </div>
+    );
+}
 export default function HeroSection() {
   return (
     <section className="relative overflow-hidden">
@@ -59,7 +119,7 @@ export default function HeroSection() {
       </div>
 
       {/* ===== SECTION BLANCHE EN DESSOUS ===== */}
-      <div className="bg-white h-[120px]" />
+        <ServicesPreview></ServicesPreview>
     </section>
   );
 }

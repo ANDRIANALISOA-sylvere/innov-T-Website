@@ -41,12 +41,13 @@ export default function Footer() {
           <div>
             <h3 className="text-2xl font-bold mb-4">LIENS</h3>
             <div className="space-y-3">
-              <a href="#" className="block text-gray-200 hover:text-green-400 transition">Accueil</a>
-              <a href="#" className="block text-gray-200 hover:text-green-400 transition">Services</a>
-              <a href="#" className="block text-gray-200 hover:text-green-400 transition">Expertises</a>
-              <a href="#" className="block text-gray-200 hover:text-green-400 transition">Notre agence</a>
-              <a href="#" className="block text-gray-200 hover:text-green-400 transition">Blog</a>
-              <a href="#" className="block text-gray-200 hover:text-green-400 transition">Carrière</a>
+              <a href="/" className="block text-gray-200 hover:text-green-400 transition">Accueil</a>
+              <a href="/services" className="block text-gray-200 hover:text-green-400 transition">Services</a>
+              <a href="/expertises" className="block text-gray-200 hover:text-green-400 transition">Expertises</a>
+              <a href="/agences" className="block text-gray-200 hover:text-green-400 transition">Notre agence</a>
+              <a href="/blog" className="block text-gray-200 hover:text-green-400 transition">Blog</a>
+              <a href="/references" className="block text-gray-200 hover:text-green-400 transition">Références</a>
+              <a href="/carriere" className="block text-gray-200 hover:text-green-400 transition">Carrière</a>
             </div>
           </div>
 
