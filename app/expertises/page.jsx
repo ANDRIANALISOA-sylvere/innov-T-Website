@@ -20,30 +20,41 @@ export default function ExpertisesPage() {
             statLabel: "clients satisfaits",
         },
         {
-            title: "Applications mobiles",
-            stat: "+120",
-            statLabel: "apps déployées",
+            title: "Développement web et E-commerce",
+            stat: "+15",
+            statLabel: "projets livrés",
         },
         {
-            title: "Projets cloud",
-            stat: "+50",
-            statLabel: "infrastructures",
+            title: "Développement d'application mobile",
+            stat: "+10",
+            statLabel: "application",
         },
         {
-            title: "Design UI/UX",
-            stat: "+200",
-            statLabel: "interfaces créées",
+            title: "Transformation digital",
+            stat: "+20",
+            statLabel: "réalistions",
         },
         {
-            title: "Audits sécurité",
-            stat: "+75",
-            statLabel: "systèmes sécurisés",
+            title: "Solution ERP et CRM",
+            stat: "+16",
+            statLabel: "clients satisfaits",
         },
         {
-            title: "E-commerce",
-            stat: "+45",
-            statLabel: "boutiques en ligne",
-        }
+            title: "Intelligence Artificielle",
+            stat: "+5",
+            statLabel: "projets réalisés",
+        },
+        {
+            title: "DevOps et Cloud computing",
+            stat: "+5",
+            statLabel: "projets",
+        },
+        {
+            title: "Staffing (mission en régie)",
+            stat: "+7",
+            statLabel: "réalisations",
+        },
+        
     ]
 
     return (
