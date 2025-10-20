@@ -126,12 +126,17 @@ export default function HeroSection() {
             isInView ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
-          <button className="px-8 cursor-pointer py-3 bg-blue-900 hover:bg-blue-700 text-white rounded-full font-semibold transition-all duration-300 hover:scale-105">
-            Découvrir nos projets
-          </button>
-          <button className="px-8 cursor-pointer py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-semibold transition-all duration-300 hover:scale-105">
-            Je veux une équipe
-          </button>
+          <Link href="/expertises">
+        <button className="px-8 cursor-pointer py-3 bg-blue-900 hover:bg-blue-700 text-white rounded-full font-semibold transition-all duration-300 hover:scale-105">
+          Découvrir nos projets
+        </button>
+      </Link>
+
+      <Link href="/agences">
+        <button className="px-8 cursor-pointer py-3 bg-green-600 hover:bg-green-700 text-white rounded-full font-semibold transition-all duration-300 hover:scale-105">
+          Je veux une équipe
+        </button>
+      </Link>
         </div>
       </div>
 
